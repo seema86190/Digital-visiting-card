@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Business Card Creator</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Create Your Visiting Card</h1>
+        <p>Choose a theme and fill in your details to create a personalized business card!</p>
+        <button class="btn" id="openFormBtn">Create a Visiting Card</button>
+    </header>
+
+    <!-- Form to input the card details -->
+    <div class="form-container" id="formContainer">
+        <h2>Fill in Your Details</h2>
+        <select id="themeSelect" required>
+            <option value="theme-classic">Classic Theme</option>
+            <option value="theme-minimal">Minimal Theme</option>
+            <option value="theme-dark">Dark Theme</option>
+            <option value="theme-modern">Modern Theme</option>
+        </select>
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="text" id="title" placeholder="Job Title" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="text" id="location" placeholder="Location" required>
+        <input type="url" id="website" placeholder="Website" required>
+        <textarea id="skills" placeholder="Skills (comma separated)" required></textarea>
+        <button id="createCardBtn">Create Card</button>
+    </div>
+
+    <!-- Preview of available themes -->
+    <div class="theme-preview" id="themePreview"></div>
+    
+    <!-- Grid to show created cards -->
+    <div class="card-grid" id="cardGrid"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
